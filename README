@@ -1,1 +1,8 @@
 This repo will hold scrips to run after a clean Ubuntu installation
+
+
+We will try to add to the existing script changes made manually today:
+software and updates - first tab select everything not selected and change server to main.
+in Other Software tab select two first options (canonical partners and canonical partners source code).
+in Update tab select all and change security updates to download and install automatically.
+in Additional Drivers check for existing drivers not installed and install where found.
