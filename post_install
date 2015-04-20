@@ -41,6 +41,3 @@ update-alternatives --config default.plymouth
 echo "Clearing History"
 cat /dev/null > ~/.bash_history && history -c && exit
 exit 0﻿
-
-
-#adding shit
