@@ -1,8 +1,8 @@
-This repo will hold scrips to run after a clean Ubuntu installation
+### This repo will hold scrips to run after a clean Ubuntu 16..04 installation
 
-
-We will try to add to the existing script changes made manually today:
-software and updates - first tab select everything not selected and change server to main.
-in Other Software tab select two first options (canonical partners and canonical partners source code).
-in Update tab select all and change security updates to download and install automatically.
-in Additional Drivers check for existing drivers not installed and install where found.
+## Goals
+The main goal for these scripts is to fully automate an Ubuntu 16.04 Desktop installation. We like to run a single script that will bring the system to our desired state - settings and packages.
+The following changes are made manually today, and should be scripted:
+* **Software and updates** - _Ubuntu Software_: Change the _Download from_ server to `Main Server`.
+* _Other Software_ tab: Check both _Canonical Partners_.
+* _Developer Options_ tab: Check  the sole option.
