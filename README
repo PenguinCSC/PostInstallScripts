@@ -1,8 +1,9 @@
-### This repo will hold scrips to run after a clean Ubuntu 16..04 installation
+This repo will hold scrips to run after a clean Ubuntu 16..04 installation
 
-## Goals
+Goals
 The main goal for these scripts is to fully automate an Ubuntu 16.04 Desktop installation. We like to run a single script that will bring the system to our desired state - settings and packages.
 The following changes are made manually today, and should be scripted:
-* **Software and updates** - _Ubuntu Software_: Change the _Download from_ server to `Main Server`.
-* _Other Software_ tab: Check both _Canonical Partners_.
-* _Developer Options_ tab: Check  the sole option.
+
+* Software and updates - Ubuntu Software: Change the _Download from_ server to `Main Server`.
+* Other Software tab: Check both Canonical Partners.
+* Developer Options tab: Check  the sole option.
