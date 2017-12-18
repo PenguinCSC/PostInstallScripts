@@ -1,43 +1,28 @@
 #!/bin/bash
 
-echo "Adding PPAs"
+# Add PPAs
 
 add-apt-repository --yes ppa:nilarimogard/webupd8
 add-apt-repository --yes ppa:webupd8team/java
 add-apt-repository --yes ppa:webupd8team/themes
 add-apt-repository --yes ppa:tualatrix/ppa
-add-apt-repository --yes ppa:tsbarnes/indicator-keylock
-add-apt-repository --yes ppa:webupd8team/nemo
 add-apt-repository --yes ppa:jconti/recent-notifications
 add-apt-repository --yes ppa:linrunner/tlp
-add-apt-repository --yes ppa:libreoffice/libreoffice-4-3
+add-apt-repository --yes ppa:jfi/ppa
+add-apt-repository --yes ppa:libreoffice/libreoffice-5-4
 
-echo "updating repositories"
-apt-get update
-apt-get upgrade
-apt-get dist-upgrade
-apt-get autoremove
-apt-get autoclean
+# upgrade System
 
-echo "Installing packages"
+apt update
+apt -y upgrade
+apt -y dist-upgrade
+apt -y autoremove
+apt autoclean
 
-apt-get install -y preload ubuntu-tweak aptitude acpi gdebi mc tlp tlp-rdw oracle-java8-installer ubuntu-wallpapers-karmic ubuntu-wallpapers-lucid ubuntu-wallpapers-maverick ubuntu-wallpapers-natty ubuntu-wallpapers-oneiric ubuntu-wallpapers-precise ubuntu-wallpapers-quantal ubuntu-wallpapers-raring ubuntu-wallpapers-saucy nemo nemo-fileroller nemo-compare nemo-dropbox nemo-media-columns nemo-pastebin nemo-seahorse nemo-share nemo-emblems nemo-image-converter dconf-tools plymouth-theme-solar whois ncdu nmap guake
+# Install Additional Packages
 
-echo "Finished adding PPAs and insatlling applications"
-echo "Unhiding Startup Applications"
+apt install -y preload ubuntu-tweak aptitude acpi unity-tweak-tool mc ubuntu-restricted-extras ubuntu-restricted-addons fping gdebi dconf-tools whois ncdu nmap guake mc tlp tlp-rdw tp-smapi-dkms acpi-call-dkms psensor cpufrequtils indicator-cpufreq hddtemp lm-sensors psensor oracle-java9-installer ubuntu-wallpapers-karmic ubuntu-wallpapers-lucid ubuntu-wallpapers-maverick ubuntu-wallpapers-natty ubuntu-wallpapers-oneiric ubuntu-wallpapers-precise ubuntu-wallpapers-quantal ubuntu-wallpapers-raring ubuntu-wallpapers-saucy nemo nemo-fileroller nemo-compare nemo-dropbox nemo-media-columns nemo-pastebin nemo-seahorse nemo-share nemo-emblems nemo-image-converter dconf-tools plymouth-theme-solar whois ncdu nmap guake
+
+# Unhide Startup Applications
+
 sed -i 's/NoDisplay=true/NoDisplay=false/g' /etc/xdg/autostart/*.desktop
-echo "Starting TLP"
-tlp start
-
-echo "Setting Up Nemo"
-
-gsettings set org.gnome.desktop.background show-desktop-icons false
-xdg-mime default nemo.desktop inode/directory application/x-gnome-saved-search
-nautilus -q
-
-echo "Setting Up Plymouth Theme"
-update-alternatives --config default.plymouth
-
-echo "Clearing History"
-cat /dev/null > ~/.bash_history && history -c && exit
-exit 0﻿
