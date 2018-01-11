@@ -24,7 +24,7 @@ apt install -y dselect
 
 dselect update
 
-dpkg --set-selections < ./pkgs.txt
+dpkg --set-selections < ./pkgs-basic-install.txt
 
 apt-get dselect-upgrade -y
 
