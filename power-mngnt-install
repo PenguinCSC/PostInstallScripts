@@ -10,6 +10,5 @@ add-apt-repository --yes ppa:jfi/ppa # Psensor Repository
 
 apt update 
 
-Install Power Manegement Tools
+## Install Power Manegement Tools
 
-apt -y install acpi tlp tlp-rdw tp-smapi-dkms acpi-call-dkms psensor cpufrequtils indicator-cpufreq hddtemp lm-sensors psensor
