@@ -12,3 +12,8 @@ apt update
 
 ## Install Power Manegement Tools
 
+dselect update
+
+dpkg --set-selections < ./
+
+apt-get dselect-upgrade -y
