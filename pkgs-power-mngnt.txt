@@ -1,0 +1,11 @@
+ acpi               install
+ tlp                install
+ tlp-rdw            install
+ tp-smapi-dkms      install
+ acpi-call-dkms     install
+ psensor            install
+ cpufrequtils       install
+ indicator-cpufreq  install
+ hddtemp            install
+ lm-sensors         install
+ psensor            install
