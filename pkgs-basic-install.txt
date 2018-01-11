@@ -12,10 +12,7 @@ ncdu                                            install
 nmap                                            install
 oracle-java8-installer                          install
 preload                                         install
-python2.7                                       install
-python3.5                                       install
 ssh                                             install
-terminator                                      install
 ubuntu-restricted-addons                        install
 ubuntu-restricted-extras                        install
 ubuntu-wallpapers                               install
