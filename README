@@ -1,4 +1,4 @@
-## Installation procedure for Hamechaytech machines:
+Installation procedure for Hamechaytech machines:
 
 **The installation consists of three stages:**
 
@@ -26,8 +26,8 @@
 2. Tick both `Download Updates` and `Install Third Party Support`.
 3. Choose `Something Else`.
 4. Partitions:
-    * SWAP: 32768 MB.
-    * Root (/): Rest of drive.
+    * SWAP: As big as the RAM (RAM *1024 - ie.: 4GB RAM * 1024 = 4096MB).
+    * Root (/): 50GB (50*1024 = 51200 MB).
 5. Create **Ubuntu** as the default user/password.
 6. After installation is done, reboot.
 7. open `Software & Updates`:
