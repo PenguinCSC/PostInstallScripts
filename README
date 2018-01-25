@@ -1,4 +1,4 @@
-## Installation procedure for CogRob Lab machines:
+## Installation procedure for Hamechaytech machines:
 
 **The installation consists of three stages:**
 
@@ -12,11 +12,9 @@
 2. Configure BIOS:
     * Press F5, to reset all settings to optimised defaults.
     * Set Time (top left corner).
-    * Press F7.
-    * Go to Advanced --> System Agent: Enable VT-d.
-    * Go to Advanced --> System Agent: Enable Abobe 4G Decoding.
-    * Go to Boot: Set Securu Boot to Other OS.
-    * Go to Boot: Key Management: Clear Secure Boot Keys.
+    * Disable Secure Boot
+    * Delete pre-installed keys.
+    * Enable VT-d.
     * Plug an Ubuntu 16.04 LTS Installation USB.
     * Press F10, save changes and reboot.
 
