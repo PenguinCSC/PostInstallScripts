@@ -1,0 +1,17 @@
+#!/bin/bash
+
+notify-send --icon=/usr/share/unity/icons/information_icon.svg "Updating Repositories List."
+
+apt update
+
+notify-send --icon=/usr/share/unity/icons/information_icon.svg "Upgrading System."
+
+apt -y upgrade
+apt -y dist-upgrade
+
+notify-send --icon=/usr/share/unity/icons/information_icon.svg "Removing Redundent Packages Cleaning Up..."
+
+apt -y autoremove
+apt -y autoclean
+
+notify-send --icon=/usr/share/unity/icons/information_icon.svg "All done!"
