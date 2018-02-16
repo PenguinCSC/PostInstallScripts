@@ -26,7 +26,7 @@ dselect update
 
 dpkg --set-selections < ./pkgs-basic-install.txt
 
-apt-get dselect-upgrade -y
+apt-get -y dselect-upgrade
 
 # Set Java JDK 9 as default
 
