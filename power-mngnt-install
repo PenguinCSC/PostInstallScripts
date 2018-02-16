@@ -16,4 +16,4 @@ dselect update
 
 dpkg --set-selections < ./pkgs-power-mngnt.txt
 
-apt-get dselect-upgrade -y
+apt-get -y dselect-upgrade
