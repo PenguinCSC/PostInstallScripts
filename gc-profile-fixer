@@ -1,0 +1,7 @@
+#! /bin/bash
+
+echo "Fixing Google Chrome profile..."
+
+rm -f ~/.config/google-chrome/Default/Web\ Data
+
+echo "Done!"
