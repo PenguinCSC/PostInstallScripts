@@ -2,7 +2,7 @@
 
 # Add PPAs
 add-apt-repository --yes ppa:webupd8team/java
-add-apt-repository --yes ppa:libreoffice/libreoffice-5-4
+add-apt-repository --yes ppa:libreoffice/libreoffice-6-0
 
 # Add the GetDeb Repo
 
