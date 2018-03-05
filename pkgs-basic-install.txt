@@ -7,13 +7,11 @@ exfat-utils                                     install
 fping                                           install
 gdebi                                           install
 htop                                            install
-intel-microcode                                 install
 mc                                              install
 ncdu                                            install
 nmap                                            install
 oracle-java8-installer                          install
 preload                                         install
-ssh                                             install
 ubuntu-restricted-addons                        install
 ubuntu-restricted-extras                        install
 ubuntu-wallpapers                               install
