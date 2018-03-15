@@ -11,6 +11,7 @@ mc                                              install
 ncdu                                            install
 nmap                                            install
 oracle-java8-installer                          install
+p7zip-full                                      install
 preload                                         install
 ubuntu-restricted-addons                        install
 ubuntu-restricted-extras                        install
