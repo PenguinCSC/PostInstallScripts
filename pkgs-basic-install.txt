@@ -1,6 +1,4 @@
-acpi                                            install
 aptitude                                        install
-bikeshed                                        install
 build-essential                                 install
 dconf-tools                                     install
 exfat-utils                                     install
