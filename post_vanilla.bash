@@ -69,6 +69,34 @@ case `lsb_release -sc` in
                 
                 ;;
         bionic)
-                echo "You are running Bionic"
+                # Add PPAs
+
+                add-apt-repository --yes ppa:webupd8team/java
+               
+               # Bring the system up-to-date
+                              
+         
+                apt -y update
+                apt -y upgrade
+                apt -y dist-upgrade
+                apt -y autoremove
+                apt -y autoclean
+                  
+                # Accept Java License
+                
+                echo "oracle-java8-installer shared/accepted-oracle-license-v1-1 select true" | debconf-set-selections
+                echo "oracle-java8-installer shared/accepted-oracle-license-v1-1 seen true" | debconf-set-selections
+                echo "oracle-java9-installer shared/accepted-oracle-license-v1-1 select true" | debconf-set-selections
+                echo "oracle-java9-installer shared/accepted-oracle-license-v1-1 seen true" | debconf-set-selections
+             
+                # Accept Microsoft TTF Fonts License
+
+                echo ttf-mscorefonts-installer msttcorefonts/accepted-mscorefonts-eula select true
+               
+                # Install additional software
+           
+                apt install -y dselect
+                dselect update
+                dpkg --set-selections < ./bionic-selections.txt                
                 ;;
 esac
