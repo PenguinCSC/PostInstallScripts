@@ -56,15 +56,7 @@ case `lsb_release -sc` in
                 mv /etc/default/apport /etc/default/apport.orig
                 cp ./apport /etc/default/
                 chmod 644 /etc/default/apport
-                
-                # Configure Scripts
-                
-                chmod +x ./gc-profile-fixer
-                chmod +x ./power-mngnt-install
-                chmod +x ./sysupdate
-                mv ./gc-profile-fixer /usr/local/bin
-                mv ./sysupdate /usr/local/bin
-                
+                               
                 # Install Power Management Tools
                 (./power-mngnt-install)
                 
