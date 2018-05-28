@@ -98,6 +98,23 @@ case `lsb_release -sc` in
            
                 apt install -y dselect
                 dselect update
-                dpkg --set-selections < ./bionic-selections.txt                
+                dpkg --set-selections < ./pkgs-basic-install.txt
+                apt-get -y dselect-upgrade
+                # Set Java JDK 9 as default
+              
+                apt install -y oracle-java9-set-default
+                                          
+               # Unhide startup programs
+
+                sed -i 's/NoDisplay=true/NoDisplay=false/g' /etc/xdg/autostart/*.desktop
+              
+                # Disable Apport Deamon
+              
+                mv /etc/default/apport /etc/default/apport.orig
+                cp ./apport /etc/default/
+                chmod 644 /etc/default/apport
+                
+                # Install Power Management Tools
+                (./power-mngnt-install)                
                 ;;
 esac
