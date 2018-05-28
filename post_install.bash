@@ -47,7 +47,8 @@ case `lsb_release -sc` in
                 
                 apt install -y oracle-java9-set-default
                 
-                # Unhide startup programs
+                              
+               # Unhide startup programs
                 sed -i 's/NoDisplay=true/NoDisplay=false/g' /etc/xdg/autostart/*.desktop
                 
                 # Disable Apport Deamon
