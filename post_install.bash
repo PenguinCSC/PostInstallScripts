@@ -107,6 +107,8 @@ case `lsb_release -sc` in
                 chmod 644 /etc/default/apport
                 
                 # Install Power Management Tools
-                (./power-mngnt-install)                
+                dpkg --set-selections < ./pkgs-power-mngnt.txt
+                apt-get -y dselect-upgrade
+    
                 ;;
 esac
