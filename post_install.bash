@@ -51,6 +51,10 @@ case `lsb_release -sc` in
                # Unhide startup programs
                 sed -i 's/NoDisplay=true/NoDisplay=false/g' /etc/xdg/autostart/*.desktop
                 
+                # Move the Launcher to the Bottom of the Screen
+                
+                #gsettings set com.canonical.Unity.Launcher launcher-position Bottom
+                
                 # Disable Apport Deamon
                 
                 mv /etc/default/apport /etc/default/apport.orig
