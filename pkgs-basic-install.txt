@@ -29,3 +29,4 @@ ubuntu-wallpapers-vivid                         install
 ubuntu-wallpapers-wily                          install
 ubuntu-wallpapers-xenial                        install
 whois                                           install
+gstreamer1.0-fluendo-mp3                        deinstall
