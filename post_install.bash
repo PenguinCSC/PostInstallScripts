@@ -64,6 +64,13 @@ case `lsb_release -sc` in
                 # Install Power Management Tools
                 (./power-mngnt-install)
                 
+                # Install Scripts
+                
+                chmod +x ./sysupdate.bash 
+                chmod 644 ./adduser.conf
+                mv ./sysupdate.bash /usrlocal/bin/
+                mv ./adduser.conf /etc/
+                
                 ;;
         bionic)
                 # Add PPAs
