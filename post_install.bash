@@ -66,11 +66,13 @@ case `lsb_release -sc` in
                 
                 # Install Scripts
                 
-                chmod +x ./sysupdate.bash 
+                chmod +x ./sysupdate.bash
+                chmod +x ./mka2z.bash
                 chmod 644 ./adduser.conf
                 mv ./sysupdate.bash /usrlocal/bin/
+                mv ./mka2z /usr/local/bin
                 mv ./adduser.conf /etc/
-                
+                            
                 ;;
         bionic)
                 # Add PPAs
@@ -121,5 +123,14 @@ case `lsb_release -sc` in
                 dpkg --set-selections < ./pkgs-power-mngnt.txt
                 apt-get -y dselect-upgrade
     
+    # Install Scripts
+                
+                chmod +x ./sysupdate.bash
+                chmod +x ./mka2z.bash
+                chmod 644 ./adduser.conf
+                mv ./sysupdate.bash /usrlocal/bin/
+                mv ./mka2z /usr/local/bin
+                mv ./adduser.conf /etc/
+                
                 ;;
 esac
