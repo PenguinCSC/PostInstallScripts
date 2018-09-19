@@ -7,7 +7,7 @@ case `lsb_release -sc` in
         xenial)
                 # Add PPAs
                 add-apt-repository --yes ppa:libreoffice/libreoffice-6-0
-                
+                add-apt-repository --yes ppa:linuxuprising/java
                               
                 # Bring the system up-to-date
                 
@@ -60,6 +60,8 @@ case `lsb_release -sc` in
                 ;;
         bionic)
                 # Add PPAs
+                
+                add-apt-repository --yes ppa:linuxuprising/java
 
              
                # Bring the system up-to-date
@@ -74,7 +76,8 @@ case `lsb_release -sc` in
                             
                 # Accept Microsoft TTF Fonts License
 
-                echo ttf-mscorefonts-installer msttcorefonts/accepted-mscorefonts-eula select true
+                # Install Java 10
+                apt -y install oracle-java10-installer
                
                 # Install additional software
            
@@ -102,8 +105,9 @@ case `lsb_release -sc` in
                 chmod +x ./sysupdate.bash
                 chmod +x ./mka2z.bash
                 chmod 644 ./adduser.conf
-                mv ./sysupdate.bash /usrlocal/bin/
-                mv ./mka2z /usr/local/bin
+                mv /etc/adduser.conf /etc/adduser.conf.orig
+                mv ./sysupdate.bash /usr/local/bin/
+                mv ./mka2z.bash /usr/local/bin
                 mv ./adduser.conf /etc/
                 
                 ;;
